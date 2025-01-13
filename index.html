@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>KakaoTalk Embed</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>Click the image below</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('0e33ad09a0d2dbcd3983d26c1ca90cf1');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '신청하기',
+        description: 'DESCRIPTION',
+        imageUrl:
+          'IMGURL',
+        link: {
+          mobileWebUrl: 'IMGCLICK MOBILE URL',
+          webUrl: 'IMGCLICK PC URL',
+        },
+      },
+      social: {
+        likeCount: LIKE, //99999 is the maximum
+        commentCount: COMMENT, //99999 is the maximum
+        sharedCount: SHARED, //99999 is the maximum
+      },
+      buttons: [
+        {
+          title: 'Button1 Text',
+          link: {
+            mobileWebUrl: 'CLICK MOBILE URL',
+            webUrl: 'CLICK PC URL',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- When clicking on the image/button, the address should be placed in Kakao Developers' Application> Platform> Web to be displayed successfully when clicked. -->
+  </body>
+</html>
